@@ -1,0 +1,7 @@
+# Node
+node_modules/
+.env
+
+# Angular
+frontend-angular/node_modules/
+API REST/node_modules/

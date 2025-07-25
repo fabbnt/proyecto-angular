@@ -1,0 +1,126 @@
+/* Reset y tipografía base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f7f8fa;
+  color: #232946;
+  font-size: 16px;
+  line-height: 1.6;
+}
+body {
+  min-height: 100vh;
+}
+
+/* Links */
+a {
+  color: #1976d2;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+a:hover {
+  color: #125ea2;
+  text-decoration: underline;
+}
+
+/* Botones */
+button {
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  background: #1976d2;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px rgba(25,118,210,0.07);
+}
+button:hover {
+  background: #125ea2;
+}
+
+/* Formularios */
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  background: #fff;
+  transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: #232946;
+}
+
+/* Contenedores */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: #fff;
+  padding: 1.2rem 0 1.2rem 0;
+  box-shadow: 0 2px 8px rgba(30,34,90,0.04);
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 2.5rem;
+}
+nav a, nav button, nav span {
+  font-size: 1rem;
+  color: #232946;
+  background: none;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+nav a:hover, nav button:hover {
+  background: #f0f4fa;
+}
+nav span {
+  font-weight: 500;
+  color: #1976d2;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: #232946;
+  margin-bottom: 1.2rem;
+}
+
+/* Tarjetas */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(30,34,90,0.06);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ececec;
+}
+
+/* Espaciado general */
+section, .section {
+  margin-bottom: 2.5rem;
+}

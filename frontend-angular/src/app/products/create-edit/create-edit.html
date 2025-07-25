@@ -1,0 +1,35 @@
+<div *ngIf="loading">Cargando...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<form [formGroup]="productForm" (ngSubmit)="submit()" *ngIf="!loading">
+  <label>
+    Nombre:
+    <input formControlName="name" />
+  </label>
+  <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+    El nombre es obligatorio.
+  </div>
+
+  <label>
+    Descripción:
+    <input formControlName="description" />
+  </label>
+  <div *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched">
+    La descripción es obligatoria.
+  </div>
+
+  <label>
+    Precio:
+    <input type="number" formControlName="price" />
+  </label>
+  <div *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+    El precio debe ser mayor o igual a 0.
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" [disabled]="productForm.invalid || loading">
+      {{ isEdit ? 'Actualizar' : 'Crear' }}
+    </button>
+    <button type="button" (click)="cancel()">Cancelar</button>
+  </div>
+</form>
